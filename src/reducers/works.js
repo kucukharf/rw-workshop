@@ -1,5 +1,6 @@
 import ApiClient from "../utils/apiClient";
 import config from "../config/config";
+import urlParser from "../utils/urlParser";
 
 const actions = {
   WORKS_REQUEST: "WORKS_REQUEST",
@@ -68,7 +69,7 @@ export const reducer = (state = initialState, action) => {
 };
 
 const getWorkDetails = function(item) {
-  const url = config.endpoints.WORK_DETAILS + item;
+  const url = urlParser(config.endpoints.WORK_DETAILS, { item: item });
   return dispatch => {
     const onSuccess = result => {
       dispatch({ type: actions.WORK_DETAIL_RECEIVED, response: result });
@@ -83,6 +84,7 @@ const getWorkDetails = function(item) {
 
 const getAllWorks = function() {
   const url = config.endpoints.WORKS;
+
   return dispatch => {
     const onSuccess = result => {
       dispatch({ type: actions.WORKS_RECEIVED, response: result });
@@ -91,6 +93,7 @@ const getAllWorks = function() {
       dispatch({ type: actions.WORKS_FAILED, response: [] });
 
     dispatch({ type: actions.WORKS_REQUEST });
+    
     ApiClient.get(url, onSuccess, onError);
   };
 };

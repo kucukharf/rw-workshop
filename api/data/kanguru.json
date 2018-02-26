@@ -7,27 +7,27 @@
 	"logo": "http://localhost:3001/static/logo--kanguru.svg",
 	"overview": "kanguru overview",
 	"duration": "2017-present",
-	"scope": "Web, Mobile, App",
+	"scope": "Mobile, App",
 	"stack": "React Native, Express, MongoDB",
-	"website": "https://kan.guru",
+	"website": "kan.guru",
 	"appstore": null,
 	"playstore": null,
 	"spotTitle": "spot title ",
 	"spotDesc": "spot desc",
 	"related": [
 		{
-			"title": "Cisa",
-			"description": "web, mobile, app",
-			"slug": "cisa",
-			"brandColor": "#f45813",
-			"image": "http://localhost:3001/static/promo--cisa.jpg"
-		},
-		{
 			"title": "Teb Factoring",
 			"description": "web, mobile, app",
 			"slug": "tebfactoring",
 			"image": "http://localhost:3001/static/promo--teb.jpg",
 			"brandColor": "#009b7b"
+		},
+		{
+			"title": "Cisa",
+			"description": "web, mobile, app",
+			"slug": "cisa",
+			"brandColor": "#f45813",
+			"image": "http://localhost:3001/static/promo--cisa.jpg"
 		}
 	]
 }

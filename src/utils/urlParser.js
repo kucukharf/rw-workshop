@@ -1,4 +1,4 @@
-const urlParser = function (str, data) {
+const urlParser = function(str, data) {
 	return str.replace(/\{\{(.*?)\}\}/g, function(match, token) {
 		return data[token];
 	});

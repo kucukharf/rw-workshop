@@ -24,8 +24,8 @@ app.use(
 	Express.static(__dirname + '/media', { maxAge: oneYearInMilliseconds })
 );
 
-app.use('/api/work/:id', function(req , res){
-  res.sendFile(req.params.id + '.json', {root: __dirname + '/data/'});
+app.use('/api/work/:id', function(req, res) {
+	res.sendFile(req.params.id + '.json', { root: __dirname + '/data/' });
 });
 
 app.listen(SERVER_PORT);

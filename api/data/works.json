@@ -1,27 +1,30 @@
-[{
-	"title":"Teb Factoring",
-	"description":"web, mobile, app",
-	"slug": "tebfactoring",
-	"image": "http://localhost:3001/static/promo--teb.jpg",
-	"brandColor": "#009b7b"
-},{
-	"title":"kan.guru",
-	"description":"web, mobile, app",
-	"slug":"kanguru",
-	"brandColor": "#D0021B",
-	"image":"http://localhost:3001/static/promo--kanguru.jpg"
-},{
-	"title":"Cisa",
-	"description":"web, mobile, app",
-	"slug":"cisa",
-	"brandColor":"#f45813",
-	"image":"http://localhost:3001/static/promo--cisa.jpg"
-
-},{
-	"title":"kepenkmarket",
-	"description":"web, mobile, app",
-	"slug":"kepenkmarket",
-	"brandColor":"#fedd1c",
-	"image":"http://localhost:3001/static/promo--km.jpg"
-
-}]
+[
+	{
+		"title": "Teb Factoring",
+		"description": "web, mobile, app",
+		"slug": "tebfactoring",
+		"image": "http://localhost:3001/static/promo--teb.jpg",
+		"brandColor": "#009b7b"
+	},
+	{
+		"title": "kan.guru",
+		"description": "web, mobile, app",
+		"slug": "kanguru",
+		"brandColor": "#D0021B",
+		"image": "http://localhost:3001/static/promo--kanguru.jpg"
+	},
+	{
+		"title": "Cisa",
+		"description": "web, mobile, app",
+		"slug": "cisa",
+		"brandColor": "#f45813",
+		"image": "http://localhost:3001/static/promo--cisa.jpg"
+	},
+	{
+		"title": "kepenkmarket",
+		"description": "web, mobile, app",
+		"slug": "kepenkmarket",
+		"brandColor": "#fedd1c",
+		"image": "http://localhost:3001/static/promo--km.jpg"
+	}
+]

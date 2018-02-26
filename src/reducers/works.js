@@ -1,6 +1,7 @@
 import ApiClient from "../utils/apiClient";
+import config from "../config/config";
+
 const actions = {
-  WORKS_INCREMENT: "WORKS_INCREMENT",
   WORKS_REQUEST: "WORKS_REQUEST",
   WORKS_RECEIVED: "WORKS_RECEIVED",
   WORKS_FAILED: "WORKS_FAILED",
@@ -23,12 +24,6 @@ export const reducer = (state = initialState, action) => {
 
     case actions.WORK_DETAIL_REQUEST:
       return { ...state, isFetching: true };
-
-    case actions.WORKS_INCREMENT:
-      return {
-        ...state,
-        total: state.total + 1
-      };
 
     case actions.WORKS_RECEIVED:
       const items = (action.response && action.response) || {};
@@ -73,7 +68,7 @@ export const reducer = (state = initialState, action) => {
 };
 
 const getWorkDetails = function(item) {
-  const url = `/api/work/` + item;
+  const url = config.endpoints.WORK_DETAILS + item;
   return dispatch => {
     const onSuccess = result => {
       dispatch({ type: actions.WORK_DETAIL_RECEIVED, response: result });
@@ -87,7 +82,7 @@ const getWorkDetails = function(item) {
 };
 
 const getAllWorks = function() {
-  const url = `/api/works/all`;
+  const url = config.endpoints.WORKS;
   return dispatch => {
     const onSuccess = result => {
       dispatch({ type: actions.WORKS_RECEIVED, response: result });

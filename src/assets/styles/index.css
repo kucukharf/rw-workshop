@@ -1464,3 +1464,46 @@ button:not(.submitted):active {
 		Helvetica Neue, Lucida Grande, sans-serif;
 	font-weight: 400;
 }
+
+
+.collapse{
+  width:80%;
+  margin: 0 auto;
+  text-align:left;
+}
+
+.collapse-content{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .400s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.collapse-title{
+  border:1px solid #111;
+  border-radius:2px;
+  padding:15px 30px;
+  display: block;
+  cursor:pointer;
+  margin-bottom:10px;
+}
+
+.collapse-content--opened{
+  max-height:600px;
+}
+
+.collapse-content-inner{
+  border:1px solid #111;
+  border-radius:2px;
+  background: #111;
+  color:#fff;
+  visibility:hidden;
+  opacity:0;
+  padding:30px 30px;
+  transition:visibility .600s linear, opacity .420s linear;
+}
+
+
+.collapse-content--opened .collapse-content-inner {
+  opacity:1;
+  visibility: visible;
+}

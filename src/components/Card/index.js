@@ -13,7 +13,7 @@ class Card extends Component {
 			<div className={clazz.join(' ')} style={{ height: 416 }}>
 				<Link
 					onClick={() => this.props.getWorkDetails(this.props.slug)}
-					to={'/work/' + this.props.slug}
+					to={'/works/' + this.props.slug}
 					style={{
 						backgroundImage: `url(${this.props.image})`,
 						backgroundColor: this.props.brandColor,

@@ -1,30 +1,100 @@
 [
 	{
 		"title": "Teb Factoring",
-		"description": "web, mobile, app",
+		"description": "web, tablet, mobile, app",
 		"slug": "tebfactoring",
-		"image": "http://localhost:3001/static/promo--teb.jpg",
-		"brandColor": "#009b7b"
+		"brandColor": "#009b7b",
+		"image": ""
 	},
 	{
 		"title": "kan.guru",
-		"description": "web, mobile, app",
+		"description": "web,tablet, mobile, app",
 		"slug": "kanguru",
 		"brandColor": "#D0021B",
-		"image": "http://localhost:3001/static/promo--kanguru.jpg"
+		"image": ""
 	},
 	{
 		"title": "Cisa",
-		"description": "web, mobile, app",
+		"description": "web, tablet, mobile, app",
 		"slug": "cisa",
 		"brandColor": "#f45813",
-		"image": "http://localhost:3001/static/promo--cisa.jpg"
+		"image": ""
 	},
 	{
 		"title": "kepenkmarket",
-		"description": "web, mobile, app",
+		"description": "web, tablet, mobile, app",
 		"slug": "kepenkmarket",
 		"brandColor": "#fedd1c",
-		"image": "http://localhost:3001/static/promo--km.jpg"
+		"image": ""
+	},
+	{
+		"title": "reddit.cool",
+		"description": "web, mobile",
+		"slug": "reddit-cool",
+		"brandColor": "#FF4500",
+		"image": ""
+	},
+	{
+		"title": "Penta",
+		"description": "web, tablet, mobile",
+		"slug": "penta",
+		"brandColor": "#d21b3b",
+		"image": ""
+	},
+	{
+		"title": "Hilton Turkey",
+		"description": "web, tablet, mobile",
+		"slug": "hilton",
+		"brandColor": "#a87a3e",
+		"image": ""
+	},
+	{
+		"title": "Erdemir",
+		"description": "web, tablet, mobile",
+		"slug": "erdemir",
+		"brandColor": "#ee3123",
+		"image": ""
+	},
+	{
+		"title": "İş Girişim Sermaye",
+		"description": "web, tablet, mobile",
+		"slug": "is-girisim",
+		"brandColor": "#072f91",
+		"image": ""
+	},
+	{
+		"title": "Utrade-FX",
+		"description": "web",
+		"slug": "utrade-fx",
+		"brandColor": "#6ec52e",
+		"image": ""
+	},
+	{
+		"title": "Uçar GM",
+		"description": "web,tablet, mobile",
+		"slug": "ucargm",
+		"brandColor": "#30a1dc",
+		"image": ""
+	},
+	{
+		"title": "Galileo Galilei Koleji",
+		"description": "web, tablet, mobile",
+		"slug": "galilei",
+		"brandColor": "#f3b701",
+		"image": ""
+	},
+	{
+		"title": "Divan Pastanesi",
+		"description": "web, tablet, mobile",
+		"slug": "divan",
+		"brandColor": "#976430",
+		"image": ""
+	},
+	{
+		"title": "Vizyon Koleji",
+		"description": "web, tablet, mobile",
+		"slug": "vizyon",
+		"brandColor": "#712483",
+		"image": ""
 	}
 ]

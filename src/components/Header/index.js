@@ -20,9 +20,9 @@ class Header extends Component {
 						</Link>
 					</aside>
 					<aside className="link-border">
-						<NavLink to="/work" activeClassName="active">
+						<NavLink to="/works" activeClassName="active">
 							{' '}
-							work{' '}
+							works{' '}
 						</NavLink>
 						<NavLink to="/about" activeClassName="active">
 							{' '}

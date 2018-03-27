@@ -12,7 +12,7 @@ class Work extends Component {
 		return (
 			<div className="fadeInUp">
 				<section className="container">
-					<h3 className="col-1-of-1 headline">Featured Work</h3>
+					<h3 className="col-1-of-1 headline">Featured Works</h3>
 				</section>
 				<section className="container clients">
 					{this.props.works.items &&

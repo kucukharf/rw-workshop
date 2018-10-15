@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import {Helmet} from 'react-helmet';
+
 
 class Home extends Component {
-	componentDidMount() {
-		console.log('About Rendered');
-	}
+  componentDidMount() {
+    console.log("About Rendered");
+  }
 
 	render() {
 		return (
 			<div className="fadeInUp">
+				<Helmet>
+		                <meta charSet="utf-8" />
+		                <title>ba</title>
+	            </Helmet>
 				<header className="container header fadeInUp">
 					<h1>UI/UX developer &amp; designer from Istanbul, Turkey.</h1>
 					<h2>
@@ -24,9 +30,10 @@ class Home extends Component {
 			</div>
 		);
 	}
+
 }
 const mapStateToProps = state => ({
-	works: state.works,
+  works: state.works
 });
 
 export default connect(mapStateToProps)(Home);

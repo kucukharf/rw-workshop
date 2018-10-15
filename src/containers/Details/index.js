@@ -5,25 +5,30 @@ import { connect } from 'react-redux';
 import Card from '../../components/Card';
 import scrollToY from '../../utils/scrollTo';
 import { getWorkDetails } from '../../reducers/works';
+import {Helmet} from 'react-helmet';
 
 class Details extends Component {
-	componentWillMount() {
-		let detail = this.props.location.pathname.split('/').slice(-1)[0];
-		this.props.getWorkDetails(detail);
-	}
-	componentWillReceiveProps() {
-		setTimeout(scrollToY(0, 1500, 'easeInOutQuint'), 500);
-	}
+    componentWillMount() {
+        let detail = this.props.location.pathname.split("/").slice(-1)[0];
+        this.props.getWorkDetails(detail);
+    }
+    componentWillReceiveProps(){
+        setTimeout(scrollToY(0, 1500, 'easeInOutQuint'), 500);
+    }
 
 	render() {
 		if (this.props.works.current) {
 			return (
 				<div className="fadeInUp">
+					<Helmet>
+		                <meta charSet="utf-8" />
+		                <title>ba | work details</title>
+		            </Helmet>
 					<section className="client-cover container">
 						<span className="SVGInline">
 							<img
 								src={this.props.works.current.logo}
-								alt="http://sony.com"
+								alt={this.props.works.current.title}
 								style={{ width: '320px', maxWidth: '100%', margin: '0 auto' }}
 							/>
 						</span>
@@ -110,62 +115,39 @@ class Details extends Component {
 									<blockquote>{this.props.works.current.spotTitle} </blockquote>
 								</div>
 							</section>
-
-							<section className="container full">
-								<div className="col-12-of-12">
-									<span className="SVGInline">
-										<img
-											src={this.props.works.current.logo}
-											alt="http://sony.com"
-											style={{
-												maxWidth: '320px',
-												margin: '0 auto',
-											}}
-										/>
-									</span>
-								</div>
-							</section>
-							<section className="container">
-								<div className="client-quote">
-									<blockquote>{this.props.works.current.spotDesc}</blockquote>
-								</div>
-							</section>
-						</div>
-					</div>
-					<div>
-						<section className="container prevnext">
-							{this.props.works.current.related &&
-								this.props.works.current.related.map((item, number) => {
-									return (
-										<Card
-											key={number}
-											extraClass="half-size"
-											image={item.image}
-											title={item.title}
-											brandColor={item.brandColor}
-											description={item.description}
-											slug={item.slug}
-										/>
-									);
-								})}
-						</section>
-					</div>
-				</div>
-			);
-		} else {
-			return null;
-		}
-	}
+                    </div>
+                </div>
+                <div>
+                    <section className="container prevnext">
+                        {this.props.works.current.related && this.props.works.current.related.map((item, number) => {
+                            return (
+                              <Card
+                                key={number}
+                                extraClass="half-size"
+                                image={item.image}
+                                title={item.title}
+                                brandColor={item.brandColor}
+                                description={item.description}
+                                slug={item.slug}
+                              />
+                            );
+                          })
+                        }
+                    </section>
+                </div>
+            </div>
+        );
+        } else {
+            return null;
+        }
+    }
 }
 
 const mapStateToProps = state => ({
-	works: state.works,
+  works: state.works
 });
 
 const mapDispatchToProps = dispatch =>
-	bindActionCreators(
-		{ getWorkDetails, changePage: location => push(location) },
-		dispatch
-	);
+  bindActionCreators({ getWorkDetails,  changePage: (location) => push(location) }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Details);

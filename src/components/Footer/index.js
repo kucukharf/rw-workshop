@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router';
+
 
 class Header extends Component {
 	componentDidMount() {
@@ -29,6 +30,9 @@ class Header extends Component {
 						<Link target="_blank" to="https://twitter.com/kucukharf">
 							Twitter
 						</Link>
+						<Link target="_blank" to="https://plus.google.com/+burakarslan">
+							Google
+						</Link>
 					</aside>
 				</section>
 			</footer>
@@ -36,4 +40,5 @@ class Header extends Component {
 	}
 }
 
-export default withRouter(Header);
+
+export default withRouter(Header)

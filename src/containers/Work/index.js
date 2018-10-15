@@ -3,14 +3,19 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { getAllWorks } from '../../reducers/works';
 import Card from '../../components/Card';
+import {Helmet} from 'react-helmet';
 
 class Work extends Component {
-	componentDidMount() {
+	componentWillMount() {
 		this.props.getAllWorks();
 	}
 	render() {
 		return (
 			<div className="fadeInUp">
+				<Helmet>
+		                <meta charSet="utf-8" />
+		                <title>ba | works</title>
+	            </Helmet>
 				<section className="container">
 					<h3 className="col-1-of-1 headline">Featured Works</h3>
 				</section>
@@ -35,9 +40,10 @@ class Work extends Component {
 }
 
 const mapStateToProps = state => ({
-	works: state.works,
+  works: state.works
 });
 
-const mapDispatchToProps = dispatch => bindActionCreators({ getAllWorks }, dispatch);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ getAllWorks }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Work);

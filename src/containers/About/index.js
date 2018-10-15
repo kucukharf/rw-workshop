@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
+import {Helmet} from 'react-helmet';
 
 class About extends Component {
 	render() {
 		return (
 			<div>
 				<section className="container fadeInUp photo">
+					<Helmet>
+		                <meta charSet="utf-8" />
+		                <title>ba | about</title>
+	            	</Helmet>
 					<div className="col-6-of-12">
 						<img
 							alt="asdasd"
@@ -23,23 +28,27 @@ class About extends Component {
 					</div>
 					<div className="col-7-of-12 link-border">
 						<p>
-							I am a developer and designer of web and mobile products. Currently based in
-							the great city of istanbul, Turkey.
+							I am a developer and designer of web and mobile products.
+							Currently based in the great city of istanbul,
+							Turkey.
 						</p>
 						<p>
-							My skills include mobile interface design, prototyping, wireframing,
-							branding, front-end development, and back-end development. I love building
-							digital products and creating enjoyable user experiences.
+							My skills include mobile interface design,
+							prototyping, wireframing, branding, front-end
+							development, and back-end development. I love
+							building digital products and creating enjoyable
+							user experiences.
 						</p>
 						<p>
-							I have a passion for minimalism in design and believe great design should be
-							invisible. Over the last 8 years, I've worked on a range of web and mobile
-							products.
+							I have a passion for minimalism in design and
+							believe great design should be invisible. Over the
+							last 8 years, I've worked on a range of web and
+							mobile products.
 						</p>
 						<p>
-							I'm always looking to work on fun projects. Feel free to{' '}
-							<a href="/contact">reach out</a> with work inquiries, side projects, or just
-							to say hello!{' '}
+							I'm always looking to work on fun projects. Feel
+							free to <a href="/contact">reach out</a> with work
+							inquiries, side projects, or just to say hello!{" "}
 						</p>
 					</div>
 				</section>

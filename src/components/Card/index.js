@@ -12,7 +12,7 @@ class Card extends Component {
     let clazz = this.props.extraClass ? [this.props.extraClass, 'card'] : ['card'];
     return (
         <div className={clazz.join(' ')} style={{height:416}}>
-            <Link onClick={() => this.props.getWorkDetails(this.props.slug)} to={"/work/" + this.props.slug }  style={{ backgroundImage:`url(${this.props.image})`, backgroundColor:this.props.brandColor, backgroundPosition: "center center", backgroundSize: "cover"}}>
+            <Link onClick={() => this.props.getWorkDetails(this.props.slug)} to={"/works/" + this.props.slug }  style={{ backgroundImage:`url(${this.props.image})`, backgroundColor:this.props.brandColor, backgroundPosition: "center center", backgroundSize: "cover"}}>
                 <div>
                     <h3>{this.props.title}</h3>
                     <hr/>

@@ -15,7 +15,7 @@ class Header extends Component {
           <Link to="/" className={this.props.location.pathname === "/" ? "active" : null} > burak arslan </Link>
           </aside>
           <aside className="link-border">
-            <NavLink to="/work" activeClassName="active"> work </NavLink>
+            <NavLink to="/works" activeClassName="active"> works </NavLink>
             <NavLink to="/about" activeClassName="active"> about </NavLink>
             <NavLink to="/contact" activeClassName="active"> contact </NavLink>
           </aside>

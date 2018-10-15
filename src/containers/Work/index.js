@@ -1,39 +1,42 @@
-import React, { Component } from "react";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import { getAllWorks } from "../../reducers/works";
-import Card from "../../components/Card";
+import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { getAllWorks } from '../../reducers/works';
+import Card from '../../components/Card';
+import {Helmet} from 'react-helmet';
 
 class Work extends Component {
-  componentDidMount() {
-    this.props.getAllWorks();
-  } 
-  render() {
-    return (
-      <div className="fadeInUp">
-        <section className="container">
-          <h3 className="col-1-of-1 headline">
-            Featured Work
-          </h3>
-        </section>
-        <section className="container clients">
-          {this.props.works.items && this.props.works.items.map((item, number) => {
-            return (
-              <Card
-                key={number}
-                image={item.image}
-                title={item.title}
-                brandColor={item.brandColor}
-                description={item.description}
-                slug={item.slug}
-              />
-            );
-          })
-        }
-        </section>
-      </div>
-    );
-  }
+	componentWillMount() {
+		this.props.getAllWorks();
+	}
+	render() {
+		return (
+			<div className="fadeInUp">
+				<Helmet>
+		                <meta charSet="utf-8" />
+		                <title>ba | works</title>
+	            </Helmet>
+				<section className="container">
+					<h3 className="col-1-of-1 headline">Featured Works</h3>
+				</section>
+				<section className="container clients">
+					{this.props.works.items &&
+						this.props.works.items.map((item, number) => {
+							return (
+								<Card
+									key={number}
+									image={item.image}
+									title={item.title}
+									brandColor={item.brandColor}
+									description={item.description}
+									slug={item.slug}
+								/>
+							);
+						})}
+				</section>
+			</div>
+		);
+	}
 }
 
 const mapStateToProps = state => ({

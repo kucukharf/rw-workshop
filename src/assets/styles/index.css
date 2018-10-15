@@ -1048,6 +1048,30 @@ h2 {
     width: 100%
 }
 
+
+.contact-form span.message {
+    font-size: 12px;
+    color: #fff;
+    padding: 5px;
+    height: 40px;
+    opacity:1;
+    transition:all linear 200ms;
+}
+
+
+
+.contact-form span.message.show {
+	opacity:1;
+}
+
+.contact-form span.message.hide {
+	opacity:0;
+	color:#000;
+}
+
+
+
+
 .contact-form input:focus,
 .contact-form textarea:focus {
     background: hsla(0, 0%, 100%, .15)
@@ -1080,6 +1104,10 @@ button:not(.submitted):hover {
 .button:not(.submitted):active,
 button:not(.submitted):active {
     background: hsla(0, 0%, 100%, .35)
+}
+.button.disabled {
+	opacity:0.5;
+	cursor:not-allowed;
 }
 
 @media (max-width:749px) {

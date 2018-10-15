@@ -1,11 +1,16 @@
-import React, { Component } from "react";
-import { withRouter } from "react-router";
+import React, { Component } from 'react';
+import { withRouter } from 'react-router';
+import {Helmet} from 'react-helmet';
 
 class About extends Component {
 	render() {
 		return (
 			<div>
 				<section className="container fadeInUp photo">
+					<Helmet>
+		                <meta charSet="utf-8" />
+		                <title>ba | about</title>
+	            	</Helmet>
 					<div className="col-6-of-12">
 						<img
 							alt="asdasd"

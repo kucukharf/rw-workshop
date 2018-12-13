@@ -6,6 +6,7 @@ import Card from '../../components/Card';
 import scrollToY from '../../utils/scrollTo';
 import { getWorkDetails } from '../../reducers/works';
 import {Helmet} from 'react-helmet';
+import assetURLParser from '../../utils/assetURLParser';
 
 class Details extends Component {
     componentWillMount() {
@@ -27,7 +28,8 @@ class Details extends Component {
 					<section className="client-cover container">
 						<span className="SVGInline">
 							<img
-								src={this.props.works.current.logo}
+							
+								src={assetURLParser(this.props.works.current.logo)}
 								alt={this.props.works.current.title}
 								style={{ width: '320px', maxWidth: '100%', margin: '0 auto' }}
 							/>
@@ -124,7 +126,7 @@ class Details extends Component {
                               <Card
                                 key={number}
                                 extraClass="half-size"
-                                image={item.image}
+                                image={assetURLParser(item.image)}
                                 title={item.title}
                                 brandColor={item.brandColor}
                                 description={item.description}

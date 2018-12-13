@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { push } from 'react-router-redux'
-import { bindActionCreators } from "redux"
-import { connect } from "react-redux";
-import { getWorkDetails } from "../../reducers/works"
-import "./card.css";
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux';
+import { getWorkDetails } from '../../reducers/works'
+import './card.css';
 
 
 class Card extends Component {
@@ -12,7 +12,9 @@ class Card extends Component {
     let clazz = this.props.extraClass ? [this.props.extraClass, 'card'] : ['card'];
     return (
         <div className={clazz.join(' ')} style={{height:416}}>
-            <Link onClick={() => this.props.getWorkDetails(this.props.slug)} to={"/works/" + this.props.slug }  style={{ backgroundImage:`url(${this.props.image})`, backgroundColor:this.props.brandColor, backgroundPosition: "center center", backgroundSize: "cover"}}>
+            <Link onClick={() => this.props.getWorkDetails(this.props.slug)} 
+              to={"/works/" + this.props.slug }  
+              style={{ backgroundImage:`url(${this.props.image})`, backgroundColor:this.props.brandColor, backgroundPosition: "center center", backgroundSize: "cover"}}>
                 <div>
                     <h3>{this.props.title}</h3>
                     <hr/>

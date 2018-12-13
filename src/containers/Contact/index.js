@@ -47,7 +47,7 @@ class Contact extends Component {
   	}
 
   	sendForm(){
-  		let mail = `mailto:${this.state.to}?subject=${encodeURIComponent(this.state.name)}&body=${encodeURIComponent(this.state.message)}&cc=${encodeURIComponent(this.state.email)}`;
+  		let mail = `mailto:${this.state.to}?subject=hi${encodeURIComponent('message from' + this.state.name)}&body=${encodeURIComponent(this.state.message)}&cc=${encodeURIComponent(this.state.email)}`;
 
   		let a = document.createElement('a');
   		a.href = mail;

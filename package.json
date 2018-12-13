@@ -18,11 +18,12 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "start": "REACT_APP_ENV=development react-scripts start",
+    "build": "REACT_APP_ENV=production react-scripts build && node ./src/utils/copyAssets.js",
+    "test": "REACT_APP_ENV=test react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "api": "node api/index.js",
+    "deploy": "cd build && aws s3 sync . s3://burakarslan.com.tr --acl public-read",
     "prod": "cd build && ws --spa index.html"
   }
 }

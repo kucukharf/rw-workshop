@@ -12,6 +12,12 @@ app.use((req, res, next) => {
 	next();
 });
 
+
+app.use(
+	'/api/media',
+	Express.static(__dirname + '/media', { maxAge: oneYearInMilliseconds })
+);
+
 app.use(
 	'/api/works/all',
 	Express.static(__dirname + '/data/works.json', {
@@ -20,8 +26,10 @@ app.use(
 );
 
 app.use(
-	'/static/',
-	Express.static(__dirname + '/media', { maxAge: oneYearInMilliseconds })
+	'/api/data/*',
+	Express.static(__dirname + '/data/works.json', {
+		maxAge: oneYearInMilliseconds,
+	})
 );
 
 app.use('/api/work/:id', function(req, res) {

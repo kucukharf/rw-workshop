@@ -11,10 +11,6 @@ import Footer from '../../components/Footer';
 import {Helmet} from 'react-helmet';
 
 class App extends Component {
-  componentDidMount() {
-    console.log("About Rendered");
-  }
-
 	render() {
 		return (
 			<div>

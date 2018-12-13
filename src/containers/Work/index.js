@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { getAllWorks } from '../../reducers/works';
 import Card from '../../components/Card';
 import {Helmet} from 'react-helmet';
+import assetURLParser from '../../utils/assetURLParser';
+import config from '../../config/config';
 
 class Work extends Component {
 	componentWillMount() {
@@ -25,7 +27,7 @@ class Work extends Component {
 							return (
 								<Card
 									key={number}
-									image={item.image}
+									image={assetURLParser(item.image)}
 									title={item.title}
 									brandColor={item.brandColor}
 									description={item.description}

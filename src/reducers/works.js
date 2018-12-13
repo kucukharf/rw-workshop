@@ -1,7 +1,6 @@
 import ApiClient from '../utils/apiClient';
 import config from '../config/config';
-import urlParser from '../utils/urlParser';
-
+import _ from 'lodash';
 const actions = {
 	WORKS_REQUEST: 'WORKS_REQUEST',
 	WORKS_RECEIVED: 'WORKS_RECEIVED',
@@ -28,8 +27,6 @@ export const reducer = (state = initialState, action) => {
 
 		case actions.WORKS_RECEIVED:
 			const items = (action.response && action.response) || {};
-			console.log('action', action.response);
-
 			return {
 				...state,
 				items: items,
@@ -38,8 +35,7 @@ export const reducer = (state = initialState, action) => {
 			};
 
 		case actions.WORK_DETAIL_RECEIVED:
-			const current = (action.response && action.response) || {};
-			console.log('action', action.response);
+			const current = (action.response && action.response)  || {};
 			return {
 				...state,
 				hasError: false,
@@ -69,14 +65,22 @@ export const reducer = (state = initialState, action) => {
 };
 
 const getWorkDetails = function(item) {
-	const url = urlParser(config.endpoints.WORK_DETAILS, { item: item });
+	const url = config.endpoints.WORKS;
+
 	return dispatch => {
 		const onSuccess = result => {
-			dispatch({ type: actions.WORK_DETAIL_RECEIVED, response: result });
+			if(_.find(result, {"slug": item })){
+				let detailItem = _.find(result, {"slug": item }).details;
+				dispatch({ type: actions.WORK_DETAIL_RECEIVED, response: detailItem });
+			} else {
+				dispatch({ type: actions.WORK_DETAIL_FAILED, response: {} })
+			}
 		};
+		
 		const onError = error => dispatch({ type: actions.WORK_DETAIL_FAILED, response: [] });
 
 		dispatch({ type: actions.WORK_DETAIL_REQUEST });
+
 		ApiClient.get(url, onSuccess, onError);
 	};
 };

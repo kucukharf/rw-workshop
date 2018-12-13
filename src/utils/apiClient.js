@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch';
 import config from '../config/config';
 
 const get = function(url, callback, onError) {
-	fetch(config.apiUrl + url)
+	fetch(config.API_URL + url)
 		.then(checkStatus)
 		.then(callback, onError);
 };

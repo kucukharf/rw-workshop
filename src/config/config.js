@@ -1,9 +1,12 @@
+const base = process.env.REACT_APP_ENV === 'development' ? 'http://localhost:3001' : 'http://burakarslan.com.tr';
+
 const config = {
-	//apiUrl: process.env.REACT_APP_API_URL || 'http://api.burakarslan.com.tr',
-	apiUrl: process.env.REACT_APP_API_URL || 'http://localhost:3001',
+	env:process.env.REACT_APP_ENV || 'development',
+	API_URL: process.env.REACT_APP_API_URL || base,
+	MEDIA_URL: process.env.REACT_APP_API_URL || base + '/api/media/',
 	endpoints: {
-		WORKS: '/api/works/all',
-		WORK_DETAILS: '/api/work/{{item}}',
+		WORKS: '/api/data/works.json',
+		WORK_DETAILS: '',
 	},
 	domain:{
 		default:'burakarslan.com.tr'

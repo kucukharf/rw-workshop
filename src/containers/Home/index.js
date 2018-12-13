@@ -5,10 +5,6 @@ import {Helmet} from 'react-helmet';
 
 
 class Home extends Component {
-  componentDidMount() {
-    console.log("About Rendered");
-  }
-
 	render() {
 		return (
 			<div className="fadeInUp">

@@ -4,9 +4,6 @@ import { withRouter } from 'react-router';
 
 
 class Header extends Component {
-	componentDidMount() {
-		console.log('footer rendered');
-	}
 	render() {
 		return (
 			<footer>

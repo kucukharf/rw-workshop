@@ -40,7 +40,6 @@ const scrollToY = function(scrollTargetY = 0, speed = 2000, easing = 'easeOutSin
 
 			window.scrollTo(0, scrollY + (scrollTargetY - scrollY) * t);
 		} else {
-			console.log('scroll done');
 			window.scrollTo(0, scrollTargetY);
 		}
 	}

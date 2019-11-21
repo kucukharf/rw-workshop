@@ -8,9 +8,11 @@ const get = function(url, callback, onError) {
 };
 
 function checkStatus(response) {
-	if (response.status >= 200 && response.status < 300) {
+	console.log(response.status);
+	if (response.status >= 200 && response.status < 300 || response.status === 502) {
 		return response.json();
-	}
+	} 
+
 	throw Error(response.statusText);
 }
 

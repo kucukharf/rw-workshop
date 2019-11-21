@@ -1,11 +1,11 @@
-const base = process.env.REACT_APP_ENV === 'development' ? 'http://localhost:3001' : 'http://burakarslan.com.tr';
+const base = process.env.REACT_APP_ENV === 'development' ? 'http://localhost:3001' : 'api.burakarslan.com.tr';
 
 const config = {
 	env:process.env.REACT_APP_ENV || 'development',
 	API_URL: process.env.REACT_APP_API_URL || base,
-	MEDIA_URL: process.env.REACT_APP_API_URL || base + '/api/media/',
+	MEDIA_URL: process.env.REACT_APP_API_URL || base + '/netlify/functions/media',
 	endpoints: {
-		WORKS: '/api/data/works.json',
+		WORKS: '/netlify/functions/works',
 		WORK_DETAILS: '',
 	},
 	domain:{

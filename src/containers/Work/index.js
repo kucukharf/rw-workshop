@@ -5,7 +5,6 @@ import { getAllWorks } from '../../reducers/works';
 import Card from '../../components/Card';
 import {Helmet} from 'react-helmet';
 import assetURLParser from '../../utils/assetURLParser';
-import config from '../../config/config';
 
 class Work extends Component {
 	componentWillMount() {

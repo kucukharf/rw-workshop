@@ -1,4 +1,4 @@
-const base = process.env.REACT_APP_ENV === 'development' ? 'http://localhost:3001' : 'http://api.burakarslan.com.tr';
+const base = process.env.REACT_APP_ENV === 'development' ? 'http://localhost:3001' : 'https://api.burakarslan.com.tr';
 
 const config = {
 	env:process.env.REACT_APP_ENV || 'development',
